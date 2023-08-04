@@ -11,6 +11,33 @@
   }
 </style>
 <script type="text/javascript">
+function replaceEverything() {
+  var phoneNumberInput = document.getElementById("phoneNumberInput").value;
+  var secondPhoneNumberInput = document.getElementById("secondPhoneNumberInput").value;
+  var emailInput = document.getElementById("emailInput").value;
+  
+  if (!phoneNumberInput.startsWith("+")) {
+    alert("Phone number must start with +");
+    return;
+  }
+  
+  if (!secondPhoneNumberInput.startsWith("+")) {
+    alert("Second phone number must start with +");
+    return;
+  }
+  
+  if (emailInput.indexOf("@corab") === -1) {
+    alert("Email must include '@corab'");
+    return;
+  }
+  
+  replaceName();
+  replaceJobTitle();
+  replacePhoneNumber();
+  replaceSecondPhoneNumber();
+  replaceEmail();
+}
+
 function replaceName() {
   var newName = document.getElementById("nameInput").value;
   var nameElement = document.getElementById("nameSpan");
@@ -72,7 +99,7 @@ function replaceEmail() {
         <span id="jobTitleSpan">Nazwa stanowiska</span><br /><br />
         M: &nbsp;<span id="phoneNumberSpan"><a href="tel:+48 123 456 789" style="color: #231F20; text-decoration: none !important; text-underline: none; ">+48 123 456 789</a></span> <br />
         T:  &nbsp;&nbsp;<span id="secondPhoneNumberSpan"><a href="tel:+48 89 535 17 90 " style="color: #231F20; text-decoration: none !important; text-underline: none; ">+48 89 535 17 90 </a></span> <br />
-        @: &nbsp;<span id="emailSpan"><a href="mailto:m.wasilewski@corab.com.pl" style="color: #231F20; text-decoration: none !important; text-underline: none; ">email@corab.com.pl</a></span> <br />
+        @: &nbsp;<span id="emailSpan"><a href="mailto:email@corab.com.pl" style="color: #231F20; text-decoration: none !important; text-underline: none; ">email@corab.com.pl</a></span> <br />
         <br />
 
       </td>
@@ -112,20 +139,16 @@ function replaceEmail() {
   </tbody>
 </table>
 <br>
-		<hr class="black-line">
-        <input type="text" id="nameInput" placeholder="Your Name">
-        <button onclick="replaceName()">Replace Name</button><br />
-        <input type="text" id="jobTitleInput" placeholder="Your Job Title">
-        <button onclick="replaceJobTitle()">Replace Job Title</button><br />
-        <input type="text" id="phoneNumberInput" placeholder="Your Phone Number">
-        <button onclick="replacePhoneNumber()">Replace Phone Number</button><br />
-        <input type="text" id="secondPhoneNumberInput" placeholder="Your Second Phone Number">
-        <button onclick="replaceSecondPhoneNumber()">Replace Second Phone Number</button><br />
-        <input type="text" id="emailInput" placeholder="Your Email">
-        <button onclick="replaceEmail()">Replace Email</button>
-		<hr class="black-line">
-		Jak dodać stopkę w Outlooku?<br><br>
-		<span style="color: grey; font-size: 20px;">Tu będzie instrukcja</span>
+<hr class="black-line">
+<input type="text" id="nameInput" placeholder="Your Name"><br>
+<input type="text" id="jobTitleInput" placeholder="Your Job Title"><br>
+<input type="text" id="phoneNumberInput" placeholder="Your Phone Number"><br>
+<input type="text" id="secondPhoneNumberInput" placeholder="Your Second Phone Number"><br>
+<input type="text" id="emailInput" placeholder="Your Email">
+<button onclick="replaceEverything()">Generate</button>
+<hr class="black-line">
+Jak dodać stopkę w Outlooku?<br><br>
+<span style="color: grey; font-size: 20px;">Tu będzie instrukcja</span>
 
 </body>
 </html>
