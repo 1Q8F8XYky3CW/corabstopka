@@ -16,13 +16,13 @@ function replaceEverything() {
   var secondPhoneNumberInput = document.getElementById("secondPhoneNumberInput").value;
   var emailInput = document.getElementById("emailInput").value;
   
-  if (!phoneNumberInput.startsWith("+")) {
-    alert("Phone number must start with +");
+  if (!phoneNumberInput.startsWith("+") || phoneNumberInput.length < 12) {
+    alert("Phone number must start with + and be at least 12 characters long");
     return;
   }
   
-  if (!secondPhoneNumberInput.startsWith("+")) {
-    alert("Second phone number must start with +");
+  if (!secondPhoneNumberInput.startsWith("+") || secondPhoneNumberInput.length < 12) {
+    alert("Second phone number must start with + and be at least 12 characters long");
     return;
   }
   
@@ -36,6 +36,17 @@ function replaceEverything() {
   replacePhoneNumber();
   replaceSecondPhoneNumber();
   replaceEmail();
+}
+
+function copyTableContent() {
+  var table = document.querySelector('table');
+  var range = document.createRange();
+  range.selectNode(table);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  alert('Podpis skopiowany do schowka!');
 }
 
 function replaceName() {
@@ -138,14 +149,15 @@ function replaceEmail() {
     </tr>
   </tbody>
 </table>
+<button onclick="copyTableContent()">Kopiuj podpis</button>
 <br>
 <hr class="black-line">
-<input type="text" id="nameInput" placeholder="Your Name"><br>
-<input type="text" id="jobTitleInput" placeholder="Your Job Title"><br>
-<input type="text" id="phoneNumberInput" placeholder="Your Phone Number"><br>
-<input type="text" id="secondPhoneNumberInput" placeholder="Your Second Phone Number"><br>
-<input type="text" id="emailInput" placeholder="Your Email">
-<button onclick="replaceEverything()">Generate</button>
+<input type="text" id="nameInput" placeholder="Imię Nazwisko"><br>
+<input type="text" id="jobTitleInput" placeholder="Stanowisko"><br>
+<input type="text" id="phoneNumberInput" placeholder="Numer telefonu"><br>
+<input type="text" id="secondPhoneNumberInput" placeholder="Numer stacjonarny"><br>
+<input type="text" id="emailInput" placeholder="Adres e-mail">
+<button onclick="replaceEverything()">Generuj</button>
 <hr class="black-line">
 Jak dodać stopkę w Outlooku?<br><br>
 <span style="color: grey; font-size: 20px;">Tu będzie instrukcja</span>
