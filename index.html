@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Corab stopka</title>
+<style type="text/css">
+  /* ... (styles) ... */
+  .black-line {
+    border: 1px solid black; /* You can adjust the thickness */
+    margin: 10px 0; /* Adjust the margin as needed */
+  }
+</style>
+<script type="text/javascript">
+function replaceName() {
+  var newName = document.getElementById("nameInput").value;
+  var nameElement = document.getElementById("nameSpan");
+  
+  if (newName.trim() !== "") {
+    nameElement.innerHTML = "<b>" + newName + "</b>";
+  }
+}
+
+function replaceJobTitle() {
+  var newJobTitle = document.getElementById("jobTitleInput").value;
+  var jobTitleElement = document.getElementById("jobTitleSpan");
+  
+  if (newJobTitle.trim() !== "") {
+    jobTitleElement.innerHTML = newJobTitle;
+  }
+}
+
+function replacePhoneNumber() {
+  var newPhoneNumber = document.getElementById("phoneNumberInput").value;
+  var phoneNumberElement = document.getElementById("phoneNumberSpan");
+  
+  if (newPhoneNumber.trim() !== "") {
+    phoneNumberElement.innerHTML = '<a href="tel:' + newPhoneNumber + '" style="color: #231F20; text-decoration: none !important; text-underline: none; ">' + newPhoneNumber + '</a>';
+  }
+}
+
+function replaceSecondPhoneNumber() {
+  var newSecondPhoneNumber = document.getElementById("secondPhoneNumberInput").value;
+  var secondPhoneNumberElement = document.getElementById("secondPhoneNumberSpan");
+  
+  if (newSecondPhoneNumber.trim() !== "") {
+    secondPhoneNumberElement.innerHTML = '<a href="tel:' + newSecondPhoneNumber + '" style="color: #231F20; text-decoration: none !important; text-underline: none; ">' + newSecondPhoneNumber + '</a>';
+  }
+}
+
+function replaceEmail() {
+  var newEmail = document.getElementById("emailInput").value;
+  var emailElement = document.getElementById("emailSpan");
+  
+  if (newEmail.trim() !== "") {
+    emailElement.innerHTML = '<a href="mailto:' + newEmail + '" style="color: #231F20; text-decoration: none !important; text-underline: none; ">' + newEmail + '</a>';
+  }
+}
+</script>
+</head>
+<body>
+
+<table width="600" border="0" cellspacing="0" cellpadding="0" style="font-family: Trebuchet MS; color: #231F20;">
+  <tbody>
+    <tr>
+      <td style="width: 23%; border-bottom: 1px solid #000000; line-height: 24px; padding-bottom: 10px;">
+        <img src="test.png" width="93" height="37" alt=""/><br><br /><br /> 
+        <a href="https://www.corab.pl/" style="color: #231F20; text-decoration: none !important; text-underline: none; font-size: 13px; line-height: 18px;"><b>corab.pl</b></a><br />
+      </td>
+      <td  style="width: 37%;font-size: 13px; line-height: 14px; border-bottom: 1px solid #000000; padding-bottom: 10px;">
+        Pozdrawiam / Best regards<br />
+        <span id="nameSpan"><b>Imię Nazwisko</b></span><br />
+        <span id="jobTitleSpan">Nazwa stanowiska</span><br /><br />
+        M: &nbsp;<span id="phoneNumberSpan"><a href="tel:+48 123 456 789" style="color: #231F20; text-decoration: none !important; text-underline: none; ">+48 123 456 789</a></span> <br />
+        T:  &nbsp;&nbsp;<span id="secondPhoneNumberSpan"><a href="tel:+48 89 535 17 90 " style="color: #231F20; text-decoration: none !important; text-underline: none; ">+48 89 535 17 90 </a></span> <br />
+        @: &nbsp;<span id="emailSpan"><a href="mailto:m.wasilewski@corab.com.pl" style="color: #231F20; text-decoration: none !important; text-underline: none; ">email@corab.com.pl</a></span> <br />
+        <br />
+
+      </td>
+      <td style="width: 40%;background-color: #f4f4f4;padding-left: 30px;font-size: 13px; line-height: 14px; border-bottom: 1px solid #000000; padding-bottom: 10px;">
+        Sprawdź naszą<br />
+        e-Hurtownię:<br />
+        <a href="https://shopb2b.corab.pl/" style="color: #231F20; text-decoration: none !important; text-underline: none; font-size: 16px; line-height: 34px"><b>shopb2b.corab.pl</b></a>
+      </td>
+    </tr>
+    <tr style="font-size: 11px; color: #717275;">
+      <td valign="top">
+        <br />
+        Corab S.A., <br />
+        ul. Michała Kajki 4, <br />
+        10-547 Olsztyn
+      </td>
+      <td valign="top">
+        <br />
+        NIP: 739-020-77-57, <br />
+        REGON: 510519084,
+      </td>
+      <td  valign="top" style="text-align: justify;">
+        <br />
+        wpisana do Rejestru Przedsiębiorców, prowa-<br>
+        dzonowego przez Sąd Rejonowy w Olsztynie, VIII <br>
+        Wydział Gospodarczy pod nr KRS: 0000950779, <br>
+        kapitał zakładowy: 1 184 000,00 zł w pełni wpłacony.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="font-size: 9px; text-align: justify; line-height: 10px; color: #717275;">
+        Niniejsza wiadomość zawiera informacje stanowiące tajemnice Spółki Corab S.A. Czytając tą wiadomość akceptujesz zastrzeżenia prawne dotyczące m.in. ochrony tajemnicy korespondencji, podstawowe warunki dotyczące użytkowania wprowadzanych przez nas do obrotu towarów oraz propozycji handlowej Spółki Corab S.A. znajdujące się pod linkiem <a href="https://corab.pl/klauzula-prawna" style="color: #717275; text-decoration: none !important; text-underline: none; ">(kliknij tutaj)</a> a także potwierdzasz zapoznanie się z nimi<br />
+        <br />
+        Administratorem danych osobowych jest Corab S.A., ul. Kajki 4, 10-547 Olsztyn, NIP 739-020-77-57, REGON 510519084, tel. +48895351790, email: <a href="mailto:corab@corab.com.pl" style="color: #717275; text-decoration: none !important; text-underline: none; ">corab@corab.com.pl</a>. Pozostałe informacje, o których mowa w art. 13 ust. 1 i 2 Ogólnego rozporządzenia o ochronie danych 2016/679 (RODO) znajdziecie Państwo na naszej <a href="https://corab.pl/polityka-prywatnosci" style="color: #717275; text-decoration: none !important; text-underline: none; ">stronie</a>.
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+		<hr class="black-line">
+        <input type="text" id="nameInput" placeholder="Your Name">
+        <button onclick="replaceName()">Replace Name</button><br />
+        <input type="text" id="jobTitleInput" placeholder="Your Job Title">
+        <button onclick="replaceJobTitle()">Replace Job Title</button><br />
+        <input type="text" id="phoneNumberInput" placeholder="Your Phone Number">
+        <button onclick="replacePhoneNumber()">Replace Phone Number</button><br />
+        <input type="text" id="secondPhoneNumberInput" placeholder="Your Second Phone Number">
+        <button onclick="replaceSecondPhoneNumber()">Replace Second Phone Number</button><br />
+        <input type="text" id="emailInput" placeholder="Your Email">
+        <button onclick="replaceEmail()">Replace Email</button>
+		<hr class="black-line">
+		Jak dodać stopkę w Outlooku?<br><br>
+		<span style="color: grey; font-size: 20px;">Tu będzie instrukcja</span>
+
+</body>
+</html>
